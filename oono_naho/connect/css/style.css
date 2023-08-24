@@ -1,0 +1,378 @@
+@charset "utf-8";
+
+:root{
+    --color_01:#ffffff88;
+    --color_02:#F5989D;
+    --color_03:#EF4868;
+    --color_04:#FEEEED;
+
+    --font_en:'Caveat', cursive;
+}
+
+*{margin: 0;padding: 0;line-height: 1;}
+body {
+font-family: Arial,"Helvetica Neue", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+/*   ここまでフォントファミリー  各OSに適したフォントを用意しておく*/
+color: #555;
+/* サイト全体の文字色を定義しておく */
+letter-spacing: 0.05em;
+/* サイト全体の文字間を定義しておく */
+line-height: 1.7;
+box-sizing: border-box;
+
+}
+li {
+list-style-type: none;
+/*   liの装飾を削除する 　ul:list-style: none;　でも同じこと */
+}
+a {
+text-decoration: none;
+/*   aタグの初期設定。aタグはでデフォルトで持っている下線を消しておく */
+}
+
+img{
+max-width: 100%;
+/* 親要素以上に大きくならない */
+vertical-align: bottom;
+/* imgは、文字と同等扱いなので、必ず下部に余白（デセンダー）が出来てしまうのを防ぐ。他の防ぐ方法としてインライン要素をブロック要素に変える方法もあり */
+}
+/* reset and initial */
+
+.container{
+position: absolute;
+max-width: 800px;
+height: 500px;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+margin: auto;
+background-color: #fff;
+padding: 50px;
+z-index: 1;
+}
+
+#bg{
+position: fixed;
+top: 0;
+left: 0;
+background-color: rgba(0, 0, 0, 0.6);
+width: 100%;
+height: 100vh;
+display: none;
+}
+
+h1{
+width: 50%;
+margin: 0 auto;
+line-height: 50px;
+text-align: center;
+font-size: 25px;
+margin-bottom: 40px;
+border-bottom: 2px solid var(--color_02);
+}
+
+.content h2{
+    font-size: 18px;
+    border-left: 15px solid var(--color_02);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.color_wrapper{
+    height: 60px;
+    display: flex;
+}
+
+.color_box{
+    width: 30%;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.color_box p{
+    background-color: #eeeeeecc;
+}
+
+/* 1つ目のページ */
+.color01_01{
+    width: 60px;
+    border-radius: 50%;
+    background-color: #444;
+    border: 1px solid #888;
+}
+
+.color01_02{
+    width: 60px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border: 1px solid #888;
+}
+
+.color01_03{
+    width: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #888;
+}
+
+
+/* 2つ目のページ */
+.color02_01{
+    width: 60px;
+    border-radius: 50%;
+    background-color: #ede4e1;
+    border: 1px solid #888;
+}
+
+.color02_02{
+    width: 60px;
+    border-radius: 50%;
+    background-color: #b94047;
+    border: 1px solid #888;
+}
+
+.color02_03{
+    width: 60px;
+    border-radius: 50%;
+    background-color: #b9404755;
+    border: 1px solid #888;
+}
+
+
+/* 3つ目のページ */
+.color03_01{
+    width: 60px;
+    border-radius: 50%;
+    background-color: #a00613;
+    border: 1px solid #888;
+}
+
+.color03_02{
+    width: 60px;
+    border-radius: 50%;
+    background-color: #138813;
+    border: 1px solid #888;
+}
+
+.color03_03{
+    width: 60px;
+    border-radius: 50%;
+    background-color: #e0d359;
+    border: 1px solid #888;
+}
+
+
+/* 4つ目のページ */
+.color04_01{
+    width: 60px;
+    border-radius: 50%;
+    background-color: #013088;
+    border: 1px solid #888;
+}
+
+.color04_02{
+    width: 60px;
+    border-radius: 50%;
+    background-color: #555;
+    border: 1px solid #888;
+}
+
+.color04_03{
+    width: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #888;
+}
+
+
+/* 5つ目のページ */
+.color05_01{
+    width: 60px;
+    border-radius: 50%;
+    background-color: #919118;
+    border: 1px solid #888;
+}
+
+.color05_02{
+    width: 60px;
+    border-radius: 50%;
+    background-color: #555;
+    border: 1px solid #888;
+}
+
+.color05_03{
+    width: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #888;
+}
+
+.colors_used .color_txt{
+    border: 1px solid var(--color_02);
+    padding: 24px 0 20px 20px;
+    width: 60%;
+    height: auto;
+    font-size: 14px;
+}
+
+.point{
+    margin-bottom: 30px;
+}
+
+.point li{
+    margin-bottom: 15px;
+}
+
+.point li::before{
+    content: "*";
+    display: inline-block;
+    font-family: var(--font_en);
+    color: var(--color_03);
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+.content p.link{
+position: absolute;
+width: 70%;
+left: 0;
+bottom: 80px;
+margin-left: 15%;
+height: 60px;
+}
+
+.content p.link a{
+display: block;
+line-height: 60px;
+text-align: center;
+background-color: var(--color_02);
+color: #fff;
+border-radius: 10px;
+font-family: var(--font_en);
+font-size: 24px;
+}
+
+.sp{
+    display: none;
+}
+
+
+@media(max-width:768px){
+
+    h2{
+        font-size: 16px;
+    }
+
+    li{
+        font-size: 14px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .color_wrapper{
+        height: 40px;
+    }
+    
+    .color_box{
+        height: 40px;
+    }
+    
+    .color01_01{
+        width: 40px;
+    }
+    .color01_02{
+        width: 40px;
+    }
+    .color01_03{
+        width: 40px;
+    }
+
+    .color02_01{
+        width: 40px;
+    }
+    .color02_02{
+        width: 40px;
+    }
+    .color02_03{
+        width: 40px;
+    }
+
+    .color03_01{
+        width: 40px;
+    }
+    .color03_02{
+        width: 40px;
+    }
+    .color03_03{
+        width: 40px;
+    }
+
+    .color04_01{
+        width: 40px;
+    }
+    .color04_02{
+        width: 40px;
+    }
+    .color04_03{
+        width: 40px;
+    }
+
+    .color05_01{
+        width: 40px;
+    }
+    .color05_02{
+        width: 40px;
+    }
+    .color05_03{
+        width: 40px;
+    }
+
+    .color_code{
+        font-size: 10px;
+    }
+    
+    .colors_used .color_txt{
+        padding: 10px;
+        font-size: 12px;
+    }
+
+}
+
+@media(max-width:598px){
+
+    .color_wrapper{
+        display: none;
+    }
+
+    ul{
+        display: none;
+    }
+
+    .sp{
+        display: block;
+        margin: 50px auto;
+        padding: 30px;
+        text-align: center;
+        border: 1px solid var(--color_02);
+    }
+
+}
+
+
+@media(max-width:317px){
+    h2{
+        display: none;
+    }
+}
+
+@media(max-width:206px){
+    .sp{
+        display: none;
+    }
+}
